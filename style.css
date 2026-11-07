@@ -1,0 +1,317 @@
+/* ---------- Basic Setup ---------- */
+:root {
+  --accent: #7c6fe0;        /* soft purple - change this to change the theme */
+  --accent-light: #f1effd;  /* very light purple for backgrounds */
+  --text: #333333;
+  --text-light: #666666;
+  --border: #e5e5ea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: #ffffff;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.narrow {
+  max-width: 750px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-size: 0.95rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Home (Hero) ---------- */
+.hero {
+  background: var(--accent-light);
+  text-align: center;
+  padding: 110px 0;
+}
+
+.hero-small {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 8px;
+  animation: fadeUp 0.8s ease;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  animation: fadeUp 0.8s ease;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin: 6px 0 14px;
+}
+
+.hero-text {
+  color: var(--text-light);
+  margin-bottom: 28px;
+}
+
+/* ---------- Buttons ---------- */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #6a5cd0;
+  border-color: #6a5cd0;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 70px 0;
+}
+
+.alt {
+  background: #f8f8fc;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 40px 0 20px;
+}
+
+#about p {
+  text-align: center;
+  color: var(--text-light);
+}
+
+/* ---------- Cards and Grids ---------- */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.small-card {
+  text-align: center;
+  font-weight: 600;
+  padding: 16px 10px;
+}
+
+.tech {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.tech strong {
+  color: var(--accent);
+}
+
+.year {
+  color: var(--accent) !important;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+#education .card {
+  margin-bottom: 16px;
+}
+
+/* ---------- Contact ---------- */
+.contact-list {
+  margin: 22px 0 28px;
+}
+
+.contact-list li {
+  margin-bottom: 6px;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 22px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* ---------- Small Animation ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive (Tablet) ---------- */
+@media (max-width: 900px) {
+  .grid-5 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Responsive (Mobile) ---------- */
+@media (max-width: 600px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero h1 { font-size: 2.2rem; }
+  .hero h2 { font-size: 1.2rem; }
+
+  .section { padding: 50px 0; }
+
+  .grid-5, .grid-4, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
